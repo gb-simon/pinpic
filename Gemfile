@@ -10,7 +10,7 @@ gem 'sqlite3', '~> 1.4'
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
 
-gem 'paperclip', '~> 4.2'
+gem 'paperclip', '~> 5.2'
 
 gem 'simple_form', '~> 4.0'
 # Use SCSS for stylesheets
