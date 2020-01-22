@@ -1,0 +1,49 @@
+<h1> Picture </h1>
+
+<div class="form-wrapper">
+  <%= simple_form_for @post, html: { class: 'form-horizontal', multipart: true } do |f| %>
+    <div class="form-group">
+      <%= f.input :image %>
+    </div>
+    <div class="form-group text-center">
+      <%= f.input :caption %>
+    </div>
+    <div class="form-group text-center">
+      <%= f.button :submit, class: 'btn-success' %>
+    </div>
+  <% end %>
+</div>
+
+
+<% @posts.each do |post| %>
+  <%= post.image %>
+  <%= post.caption %>
+<% end %>
+
+
+<% @posts.each do |post| %>
+  <div class="row">
+    <%= link_to (image_tag post.image.url(:medium)), post_path(post) %>
+    <p>
+      <%= post.caption %>
+    </p>
+  </div>
+<% end %>
+
+<div class="posts-wrapper row">
+  <% @posts.each do |post| %>
+    <div class="post">
+      <div class="post-head">
+        <div class="name">
+          Ben Walker
+        </div>
+      </div>
+      <div class="image center-block">
+        <%= link_to (image_tag post.image.url(:medium), class:'img-responsive'), post_path(post) %>
+      </div>
+      <p class="caption">
+        <%= post.caption %>
+      </p>
+    </div>
+  <% end %>
+</div>
