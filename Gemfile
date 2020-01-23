@@ -12,7 +12,7 @@ gem 'puma', '~> 4.1'
 
 gem 'paperclip', '~> 4.2'
 
-gem 'simple_form', '~> 4.0'
+gem 'simple_form'
 
 gem 'bootstrap-sass', '~> 3.3.5'
 # Use SCSS for stylesheets
